@@ -19,8 +19,8 @@ soma_altura = 0
 media_altura = 0
 
 for i in range(alunos):
-    a = randint(12, 18)
-    b = randint(100, 180)
+    a = randint(8, 16)
+    b = randint(70, 180)
 
     soma_altura += b
     idade.append(a)
