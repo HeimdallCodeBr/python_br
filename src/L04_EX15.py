@@ -114,8 +114,10 @@ print('\n')
 # SAIDA DO PROGRAMA
 # =============================================
 # a. Quantidade de valores.....: 10
-# b. Valores na ordem digitados: [7.0, 2.0, 4.0, 2.0, 8.0, 7.0, 8.0, 9.0, 8.0, 1.0]
-# c. Valores na ordem reversa..: [1.0, 8.0, 9.0, 8.0, 7.0, 8.0, 2.0, 4.0, 2.0, 7.0]
+# b. Valores na ordem digitados: [7.0, 2.0, 4.0, 2.0, 8.0, 7.0, 8.0, 9.0, 8.0,
+#                                 1.0]
+# c. Valores na ordem reversa..: [1.0, 8.0, 9.0, 8.0, 7.0, 8.0, 2.0, 4.0, 2.0,
+#                                 7.0]
 # d. Soma dos valores..........: 56.0
 # e. Média dos valores.........: 5.6
 # f. Valores acima da média....: [7.0, 8.0, 7.0, 8.0, 9.0, 8.0]
