@@ -18,8 +18,6 @@
       "editor.insertSpaces": true,
       "editor.formatOnSave": true,
       "editor.formatOnType": true,
-      "editor.minimap.enabled": true,
-
       "editor.codeActionsOnSave": {
         "source.organizeImports": true
       }
@@ -59,5 +57,6 @@
       "javascript": "javascriptreact",
       "typescript": "typescriptreact"
     },
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "python.analysis.typeCheckingMode": "basic"
   }
