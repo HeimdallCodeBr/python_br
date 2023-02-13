@@ -22,3 +22,11 @@
 # Atleta: Rodrigo Curvêllo
 # Saltos: 6.5 - 6.1 - 6.2 - 5.4 - 5.3
 # Média dos saltos: 5.9 m
+
+from os import system
+
+system('clear')
+
+nome = [None] * 5
+
+print(nome)

@@ -6,12 +6,11 @@
 
 
 import os
-from operator import index
 
 os.system('clear')
 
 nota = [7, 6.5, 7, 5]
-media = 0
+media = 0.0
 
 for i in nota:
     print(f'Nota: {i}')
