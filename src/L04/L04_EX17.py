@@ -27,6 +27,35 @@ from os import system
 
 system('clear')
 
-nome = [None] * 5
+nome = []
+texto = ['Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quinto']
+distancia = []
+resultado = []
+media = []
 
-print(nome)
+i = 0
+s = 5
+m = 0.0
+
+while True:
+    n = input('Informe o nome do atleta {}: '.format(i+1))
+    if n != '':
+        nome.append(n)
+        i += 1
+        for ds in range(s):
+            d = float(
+                input('Informe a distancia do salto {}/{}: '.format(ds+1, s)))
+            distancia.append(d)
+            m += d
+    else:
+        break
+
+    resultado.append(distancia)
+    distancia = []
+    media.append(m / s)
+    m = 0.0
+
+f = (media.index(max(media)))
+print(nome[f])
+print(resultado[f])
+print(media[f])
