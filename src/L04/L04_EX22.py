@@ -74,14 +74,9 @@ while True:
                     print('Digite valores entre 1 e 4')
                     input()
                 else:
-                    if identificacao in identificacao_mouse:
-                        print('Já existe mouse com esse numero de série')
-                        input()
-                    else:
-                        if situacao in defeito_codigo:
-                            defeito_quantidade[defeito_codigo.index(
-                                situacao)] += 1
-                            identificacao_mouse.append(identificacao)
+                    if situacao in defeito_codigo:
+                        defeito_quantidade[defeito_codigo.index(situacao)] += 1
+                        identificacao_mouse.append(identificacao)
 
 
 print('\n')
