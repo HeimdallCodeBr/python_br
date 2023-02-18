@@ -32,10 +32,16 @@ texto = ['Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quinto']
 distancia = []
 resultado = []
 media = []
-
+a = ''
 i = 0
 s = 5
 m = 0.0
+
+nome = ['Joaquim', 'Pedro', 'Laerte']
+resultado = [[3.45, 3.68, 3.46, 3.38, 3.54], [
+    3.47, 3.39, 3.48, 3.58, 3.61], [3.2, 3.6, 3.49, 3.38, 3.68]]
+media = [3.502, 3.506, 3.490]
+
 
 while True:
     n = input('Informe o nome do atleta {}: '.format(i+1))
@@ -55,7 +61,19 @@ while True:
     media.append(m / s)
     m = 0.0
 
+
+system('clear')
 f = (media.index(max(media)))
-print(nome[f])
-print(resultado[f])
-print(media[f])
+print('Atleta: {}'.format(nome[f]))
+
+for i, t in enumerate(texto):
+    print('{} salto: {} m'.format(t, resultado[f][i]))
+    a = a + ' - ' + str(resultado[f][i])
+
+print('\n')
+print('RESULTADO FINAL:')
+print('Atleta: {}'.format(nome[f]))
+
+a = a[3:]
+print('Saltos: {}'.format(a))
+print('Média dos saltos: {} m'.format(media[f]))

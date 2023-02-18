@@ -45,3 +45,42 @@
 # 5 - peugeout- 14.5  -   69.0  litros - R$ 155.17
 
 # O menor consumo é do peugeout.
+
+from os import system
+
+system('clear')
+veiculo = []
+veiculos = []
+consumo = []
+v = 0
+nome = ''
+km_l = 0.0
+
+
+while v < 5:
+    print('Veiculo: {}'.format(v+1))
+    nome = input('Nome: ')
+    km_l = float(input('km/l: '))
+    print('-------------------------------')
+    v += 1
+    veiculo.append(v)
+    veiculos.append(nome)
+    consumo.append(km_l)
+
+
+# veiculo = [1, 2, 3, 4, 5]
+# veiculos = ['Renault Kwid', 'GM Onix', 'Fiat Argo', 'GMT Turbo', 'Fiat Mobi']
+# consumo = [15.2, 18.3, 14.2, 14.9, 24.5]
+
+print('\n')
+print('Relatório Final')
+print('---------------')
+
+for i in range(len(veiculos)):
+    litros = 1000/consumo[i]
+    gasto = litros * 2.25
+    print('{:<1} - {:<12} - {:<5}km/l - {:.0f} litros - R$ {:.2f}'.format(
+        veiculo[i], veiculos[i], consumo[i], litros, gasto))
+
+print('\nO menor consumo é do {}\n'.format(
+    veiculos[consumo.index(max(consumo))]))
