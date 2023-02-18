@@ -74,9 +74,8 @@ while True:
                     print('Digite valores entre 1 e 4')
                     input()
                 else:
-                    if situacao in defeito_codigo:
-                        defeito_quantidade[defeito_codigo.index(situacao)] += 1
-                        identificacao_mouse.append(identificacao)
+                    defeito_quantidade[defeito_codigo.index(situacao)] += 1
+                    identificacao_mouse.append(identificacao)
 
 
 print('\n')
