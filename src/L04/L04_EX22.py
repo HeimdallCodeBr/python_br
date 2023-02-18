@@ -59,7 +59,6 @@ while True:
 
     identificacao = input('A. Informe a identificação do mouse: ')
     if identificacao == '0':
-
         break
     else:
         if identificacao in identificacao_mouse:
