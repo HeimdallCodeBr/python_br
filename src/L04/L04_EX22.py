@@ -52,7 +52,7 @@ while True:
     system('clear')
     print('======================================')
     for d, e in enumerate(defeito_codigo):
-        print('{} - {}'.format(d, defeito_nome[int(d)]))
+        print('{} - {}'.format(d+1, defeito_nome[int(d)]))
     print('Pressione 0 para sair ')
     print('======================================')
     print('\n')

@@ -9,12 +9,12 @@
 # Através de um programa, baixado da Internet, ele conseguiu gerar o
 # seguinte arquivo, chamado "usuarios.txt":
 
-# alexandre   456123789
-# anderson    1245698456
-# antonio     123456456
-# carlos      91257581
-# cesar       987458
-# rosemary    789456125
+# alexandre     456123789
+# anderson      1245698456
+# antonio       123456456
+# carlos        91257581
+# cesar         987458
+# rosemary      789456125
 
 # Neste arquivo, o nome do usuário possui 15 caracteres. A partir deste
 # arquivo, você deve criar um programa que gere um relatório, chamado
@@ -40,3 +40,49 @@
 # deverá ser feita através de uma função separada, que será chamada pelo
 # programa principal. O cálculo do percentual de uso também deverá ser feito
 #  através de uma função, que será chamada pelo programa principal.
+
+from os import system
+
+system('clear')
+
+nome: list = []
+utilizado: list = []
+percentual: list = []
+MB = 1024*1024
+soma = 0.0
+media = 0.0
+m = 0
+
+with open('src/L04/usuarios.txt') as arquivo:
+    linhas = arquivo.readlines()
+
+for i in (linhas):
+    i = i.replace(' ', ',', 1)
+    n, c = i.split(',')
+    c = f'{float(c)/MB:.2f}'
+    nome.append(n)
+    utilizado.append(c)
+    soma += float(c)
+
+
+media = soma/len(nome)
+
+with open('src/L04/relatorio.txt', 'w') as saida:
+    saida.write('ACME Inc.            Uso do espaço em disco pelos usuários\n')
+    saida.write(
+        '------------------------------------------------------------------\n')
+    saida.write('Nr.  Usuário             Espaço utilizado         % do uso\n')
+    for k in range(len(nome)):
+        c1 = str(k+1).ljust(5)
+        c2 = nome[k].ljust(15)
+        c3 = utilizado[k].rjust(12)
+        c4 = float(utilizado[k])/soma*100
+        saida.write(f'{c1}{c2}{c3} MB               {c4:.2f}%\n')
+    saida.write('\n')
+    saida.write('Espaço total ocupado: {:.2f} MB\n'.format(soma))
+    saida.write('Espaço médio ocupado: {:.2f} MB\n'.format(media))
+    saida.write('\n')
+
+
+with open("src/L04/relatorio.txt", "r") as arquivo:
+    print(arquivo.read())
