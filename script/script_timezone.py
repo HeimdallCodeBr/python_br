@@ -1,8 +1,6 @@
 from datetime import datetime
 from os import system
 
-import pytz
-
 system('clear')
 
 
