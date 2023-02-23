@@ -24,4 +24,4 @@ def imprimi_numeros(n):
     return r + '\n'
 
 
-print(imprimi_numeros(7))
+print(imprimi_numeros(9))
