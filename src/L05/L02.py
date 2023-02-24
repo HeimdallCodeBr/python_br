@@ -21,7 +21,7 @@ def imprimi_numeros(n):
         r += '\n'
         for k in range(1, i+1):
             r += (str(k) + ' ')
-    return r + '\n'
+    return r
 
 
 print(imprimi_numeros(9))

@@ -13,5 +13,20 @@ o imposto sobre vendas.
 """
 
 
-def somaImposto(taxa, custo):
-    return True
+def somaImposto(custo: float, taxa: float) -> float:
+    '''
+    SomaImposto:
+                função "altera" o valor do custo
+                para incluir o imposto sobre vendas
+
+    Parametros:
+                custo (float): valor do custo do produto
+                taxa (float): valor da taxa em percentual decimal
+    Retorna:
+                preco_atualizado (float): valor preço de venda com imposto
+
+    '''
+    return custo + (custo * taxa)
+
+
+print(somaImposto(150, 0.022))
