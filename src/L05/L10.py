@@ -27,14 +27,6 @@ Você perde, no entanto, se tirar um 7 antes de tirar este Ponto novamente.
 """
 
 
-def telaJogo(d1: int, d2: int):
-    d1 = jogarDados()
-    d2 = jogarDados()
-    a = (
-        f'------------------\nDado 1: [{d1}]\nDado 2: [{d2}]\nSoma:   [{d1+d2}]\n------------------\n')
-    return a
-
-
 def jogarDados():
     return randint(1, 6)
 
@@ -82,7 +74,7 @@ while True:
         print(f'Soma:   [{dado1+dado2}]\n')
 
         if msn == 0:
-            print('VENCEDOR!')
+            print('> > > VENCEDOR! < < <')
             break
         elif msn == -1:
             print('PERDEU!')
