@@ -50,6 +50,7 @@ def validaRegrasCraps(d1: int, d2: int, jogada: bool, p: int) -> int:
 # ==================
 # PROGRAMA PRINCIPAL
 # ==================
+
 lancamentos = 1
 dado1 = 0
 dado2 = 0
