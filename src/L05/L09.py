@@ -27,6 +27,7 @@ def numero_reverso(n: str) -> str:
 # ==================
 # PROGRAMA PRINCIPAL
 # ==================
+
 for i in range(10):
     a = str(randint(100, 999))
     print(f'{a} <=> {numero_reverso(a)}')

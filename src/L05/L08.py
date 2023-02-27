@@ -16,4 +16,5 @@ def quantidade_digitos(n):
 # ==================
 # PROGRAMA PRINCIPAL
 # ==================
+
 print(quantidade_digitos(23222447888))
