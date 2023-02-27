@@ -31,6 +31,9 @@ def polaridade_numero(n: int) -> str:
         return 'P'
 
 
+# ==================
+# PROGRAMA PRINCIPAL
+# ==================
 print(polaridade_numero(6))
 print(polaridade_numero(-4))
 print(polaridade_numero(0))

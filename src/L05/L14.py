@@ -20,5 +20,9 @@ com as características acima.
 Dica: produza todas as combi nações possíveis e verifique a soma quando
 completar cada quadrado.  Usar um vetor de 1 a 9 parece ser mais simples que
 usar uma matriz 3x3.
-
 """
+
+
+# ==================
+# PROGRAMA PRINCIPAL
+# ==================

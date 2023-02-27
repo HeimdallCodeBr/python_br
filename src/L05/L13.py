@@ -15,3 +15,8 @@ Se valores fora da faixa forem informados, eles devem ser modificados
 para valores dentro da faixa de forma elegante.
 
 """
+
+
+# ==================
+# PROGRAMA PRINCIPAL
+# ==================

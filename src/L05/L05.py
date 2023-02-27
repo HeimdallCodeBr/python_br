@@ -29,4 +29,7 @@ def somaImposto(custo: float, taxa: float) -> float:
     return custo + (custo * taxa)
 
 
+# ==================
+# PROGRAMA PRINCIPAL
+# ==================
 print(somaImposto(150, 0.022))

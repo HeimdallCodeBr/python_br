@@ -16,6 +16,18 @@ Use uma função que receba um valor n inteiro imprima até a n-ésima linha.
 
 
 def imprimi_numeros(n):
+    '''
+    SomaImposto:
+                função verifica se numero é positivo(+) ou negativo(-)
+
+    Parametros:
+                n (int): numero real
+
+    Retorna:
+                'P' (str): para numeros > 0
+                'N' (str): para numeros <= 0
+
+    '''
     r = ''
     for i in range(1, n+1):
         r += '\n'
@@ -24,4 +36,7 @@ def imprimi_numeros(n):
     return r
 
 
+# ==================
+# PROGRAMA PRINCIPAL
+# ==================
 print(imprimi_numeros(9))

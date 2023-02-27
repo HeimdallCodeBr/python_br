@@ -15,3 +15,8 @@ Padronize em sua função que todos os caracteres serão devolvidos em
 caixa alta ou caixa baixa, independentemente de como foram digitados.
 
 """
+
+
+# ==================
+# PROGRAMA PRINCIPAL
+# ==================

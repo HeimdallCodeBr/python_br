@@ -26,4 +26,7 @@ def soma_numeros(n1: int, n2: int, n3: int) -> int:
     return n1+n2+n3
 
 
+# ==================
+# PROGRAMA PRINCIPAL
+# ==================
 print(soma_numeros(2, 3, 5))
