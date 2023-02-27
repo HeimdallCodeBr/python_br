@@ -38,7 +38,7 @@ def embaralha_palavras(texto: str) -> str:
                 i -= 1
     for p in m:
         texto_aleatoria += texto[p]
-    return texto_aleatoria.upper()
+    return texto_aleatoria.upper(), m
 
 
 # ==================
