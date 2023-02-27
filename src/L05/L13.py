@@ -44,11 +44,10 @@ def desenha_moldura(tc: int, tl: int) -> str:
 # ==================
 while True:
     system('clear')
-    for z in range(1):
-        tc = randint(1, 25)
-        tl = randint(1, 25)
-        print(f'Tamanho Coluna {tc} x Linha {tl}')
-        print(desenha_moldura(tc, tl))
+    tc = randint(1, 25)
+    tl = randint(1, 25)
+    print(f'Tamanho Coluna {tc} x Linha {tl}')
+    print(desenha_moldura(tc, tl))
     s = input('Digite 0 para sair')
     if s == '0':
         break
