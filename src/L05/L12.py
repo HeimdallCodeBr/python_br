@@ -21,7 +21,7 @@ caixa alta ou caixa baixa, independentemente de como foram digitados.
 system('clear')
 
 
-def embaralha_palavras(texto: str) -> str:
+def embaralha_palavras(texto: str) -> tuple:
     t = len(texto)
     i = 0
     m: list = []
@@ -47,3 +47,4 @@ def embaralha_palavras(texto: str) -> str:
 
 
 print(embaralha_palavras('Tatuí Cidade de São Paulo'))
+print(embaralha_palavras('Jefersom'))
