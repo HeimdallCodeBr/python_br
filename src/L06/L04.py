@@ -3,8 +3,10 @@
 """Resolução Lista 06 Exercicio 04 Python Brasil (J.Siqueira 02/23)."""
 
 """
-4. Nome na vertical em escada.
-Modifique o programa anterior de forma a mostrar o nome em formato de escada.
+Nome na vertical em escada.
+
+Modifique o programa anterior de forma a 
+mostrar o nome em formato de escada.
 
 F
 FU
@@ -14,3 +16,13 @@ FULAN
 FULANO
 
 """
+
+nome = input('Digite um nome: ')
+
+nome = nome.upper()
+
+escala = ''
+
+for i in nome:
+    escala += i
+    print(escala)

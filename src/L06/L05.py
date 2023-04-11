@@ -3,8 +3,10 @@
 """Resolução Lista 06 Exercicio 05 Python Brasil (J.Siqueira 02/23)."""
 
 """
-5. Nome na vertical em escada invertida.
-Altere o programa anterior de modo que a escada seja invertida.
+Nome na vertical em escada invertida.
+
+Altere o programa anterior de modo que
+a escada seja invertida.
 
 FULANO
 FULAN
@@ -14,3 +16,13 @@ FU
 F
 
 """
+
+nome = input('Digite um nome: ')
+
+nome = nome.upper()
+
+tamanho = len(nome)
+
+print(nome)
+for i in range(1, tamanho):
+    print(nome[:-i])
