@@ -3,10 +3,14 @@
 """Resolução Lista 06 Exercicio 11 Python Brasil (J.Siqueira 02/23)."""
 
 """
-11. Jogo de Forca.
+Jogo de Forca.
+
 Desenvolva um jogo da forca.
-O programa terá uma lista de palavras lidas de um arquivo texto e escolherá
-uma aleatoriamente. O jogador poderá errar 6 vezes antes de ser enforcado.
+
+O programa terá uma lista de palavras lidas de um arquivo
+texto e escolherá uma aleatoriamente.
+
+O jogador poderá errar 6 vezes antes de ser enforcado.
 
 Digite uma letra: A
 -> Você errou pela 1ª vez. Tente de novo!
