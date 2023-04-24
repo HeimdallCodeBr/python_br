@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from os import system
+
 """Resolução Lista 06 Exercicio 11 Python Brasil (J.Siqueira 02/23)."""
 
 """
@@ -22,3 +24,12 @@ Digite uma letra: S
 -> Você errou pela 2ª vez. Tente de novo!
 
 """
+
+system("clear")
+
+palavra = "laranja"
+palavra_secreta = ""
+letra = "a"
+
+for i, j in enumerate(palavra):
+    print(i, j)

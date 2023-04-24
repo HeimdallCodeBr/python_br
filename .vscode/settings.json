@@ -15,7 +15,7 @@
     "python.formatting.autopep8Args": ["--indent-size=4"],
     "python.defaultInterpreterPath": "venv/bin/python",
     "[python]": {
-      "editor.defaultFormatter": "ms-python.python", // ms-python.python
+      "editor.defaultFormatter": "ms-python.black-formatter", // ms-python.python
       "editor.tabSize": 4,
       "editor.insertSpaces": true,
       "editor.formatOnSave": true,
@@ -60,6 +60,7 @@
       "typescript": "typescriptreact"
     },
     "editor.minimap.enabled": false,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "none"
 
   }
