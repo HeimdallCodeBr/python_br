@@ -33,4 +33,3 @@ letra = "a"
 
 for i, j in enumerate(palavra):
     print(i, j)
--
