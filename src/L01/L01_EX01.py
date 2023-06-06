@@ -3,4 +3,4 @@
 
 # https://wiki.python.org.br/ListaDeExercicios
 
-print('Alô Mundo!')
+print( "  Alô Mundo!")
