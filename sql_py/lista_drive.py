@@ -1,3 +1,7 @@
+# ---------------------------------------
+# Lista drives ODBC instalados no sistema
+# ---------------------------------------
+
 import pyodbc
 
 lista = pyodbc.drivers()
