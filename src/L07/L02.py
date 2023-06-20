@@ -2,11 +2,14 @@
 
 """Resolução Lista 07 Exercicio 02 Python Brasil (J.Siqueira 06/23)."""
 
+
+import os
+
 """
 2. A ACME Inc., uma empresa de 500 funcionários, está tendo problemas de
 espaço em disco no seu servidor de arquivos.
 
-Para tentar resolver este problema, o Adminis trador de Rede precisa saber
+Para tentar resolver este problema, o Administrador de Rede precisa saber
 qual o espaço ocupado pelos usuários, e identificar os usuários com maior
 espaço ocupa do. Através de um programa, baixado da Internet, ele conseguiu
 gerar o seguinte arquivo, chamado "usuarios.txt":
@@ -45,4 +48,37 @@ O cálculo do percentual de uso também deverá ser feito através de uma funç�
 que será chamada pelo programa principal.
 
 """
+
+os.system('clear')
+
+
+with open('src/L07/usuario.txt') as registros:
+    registro = registros.readlines()
+
+usuario = {}
+c1 = ''
+c2 = ''
+usuarios = 0.0
+soma = 0.0
+media = 0.0
+for i in registro:
+    c1 = i[:15].strip()
+    c2 = i[16:].strip()
+    c2_mb = float(c2)/1048576
+    usuario[c1] = c2_mb
+    usuarios += 1
+    soma += float(c2_mb)
+
+
+with open('src/L07/relatorio.txt', 'w') as saida:
+    saida.write('ACME Inc.               Uso do espaço em disco pelos usuários')
+    saida.write('\n------------------------------------------------------------------------\n')
+    saida.write('Nr.  Usuário        Espaço utilizado     % do uso\n')
+    for m, k in enumerate(usuario.keys()):
+        saida_txt = f'{m:<4} {k:<5}\t{usuario[k]:>10.2f}\t{(usuario[k]/soma)*100:>15.2f}\n'
+        saida.write(saida_txt)
+        media = (soma/usuarios)
+    saida.write(f'\nEspaço total ocupado: {soma:.2f} MB')
+    saida.write(f'\nEspaço médio ocupado: {media:.2f} MB')
+
 

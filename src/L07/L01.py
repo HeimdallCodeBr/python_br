@@ -4,7 +4,6 @@
 
 import os
 import datetime
-import shutil
 
 """
 1. Faça um programa que leia um arquivo texto contendo uma lista de
