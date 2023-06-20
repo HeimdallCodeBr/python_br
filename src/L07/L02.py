@@ -75,10 +75,13 @@ with open('src/L07/relatorio.txt', 'w') as saida:
     saida.write('\n------------------------------------------------------------------------\n')
     saida.write('Nr.  Usuário        Espaço utilizado     % do uso\n')
     for m, k in enumerate(usuario.keys()):
-        saida_txt = f'{m:<4} {k:<5}\t{usuario[k]:>10.2f}\t{(usuario[k]/soma)*100:>15.2f}\n'
+        id = (f'{m}')
+        nome = (f'{k}')
+        utilizado = (f'{usuario[k]:.2f} MB')
+        uso = (f'{(usuario[k]/soma)*100:.2f} %')
+
+        saida_txt = id, nome, utilizado, uso 
         saida.write(saida_txt)
         media = (soma/usuarios)
     saida.write(f'\nEspaço total ocupado: {soma:.2f} MB')
     saida.write(f'\nEspaço médio ocupado: {media:.2f} MB')
-
-
