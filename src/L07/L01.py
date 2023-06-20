@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-"""Resolução Lista 07 Exercicio 01 Python Brasil (J.Siqueira 02/23)."""
+"""Resolução Lista 07 Exercicio 01 Python Brasil (J.Siqueira 06/23)."""
 
-from os import system
-
+import os
+import datetime
+import shutil
 
 """
 1. Faça um programa que leia um arquivo texto contendo uma lista de
@@ -35,42 +36,102 @@ O arquivo de saída possui o seguinte formato:
 192.168.0.256
 
 """
-system('clear')
+os.system('clear')
+
+# Função para ler o arquivo e transformar em uma lista
+#   1. Verificar se o arquivo de entrada existe no diretorio corrente;
 
 
-# Função ler arquivo .txt
 def le_txt(arquivo):
+    # shutil.os.remove('saida.txt')
     lista = []
-    with open(arquivo, "r") as txt:
-        conteudo = txt.read()
-    for c in conteudo.split('\n'):
-        lista.append(c)
-    return lista
+    if os.path.exists(arquivo):
+        with open(arquivo, 'r') as registros:
+            ips = registros.read()
+        for ip in ips.strip().split('\n'):
+            lista.append(ip)
+        return lista
+    else:
+        if not os.path.exists(arquivo):
+            return lista
 
-# Função gravar arquivo .txt
-def grava_txt(item):
-    
-
-
-
-# ---------------------
-# PROGRAMA PRINCIPAL
-# ---------------------
-
-relacao_ip = le_txt('src/L07/ip.txt')
+# Função para classifica a validade do IP em VÁLIDOS e INVÁLIDOS
+#   1. Verifica se existe conteudo dentro do arquivo;
+#   2. Remove os espaços em brancos;
+#   3. Verifica se atende a estrutura de 4 conjuntos/3 digitos entre 0 - 255;
+#   4. Saida é gera uma tupla com IPs válidos e inválidos;
 
 
-print(relacao_ip)
-
-validos: list = []
-invalidos: list = []
-valido = True
-
-for i in relacao_ip:
-
-
-    for k in i.split('.'):
-        if k <= 255:
-            valido = True
+def verifica_ip(lista):
+    approved = []
+    disapproved = []
+    e = 0  # error length
+    v = 0  # validated
+    for ip in lista:
+        v = 0
+        e = 0
+        for i in ip.split('.'):  # verifica se IP tem 4 conjuntos de 32 bits
+            v += 1
+            if int(i) < 0 or int(i) > 255:  # verifica os valores entre 0 - 255
+                e += 1
+        if v == 4 and e == 0:
+            approved.append(ip)
         else:
-            valido =  False
+            disapproved.append(ip)
+    return approved, disapproved
+
+# Função gera arquivo de saida;
+#   1. Inclui cabeçalho: [Endereços válidos:]
+#   2. Grava os IPs válidos
+#   3. Pula 2 linhas em braco
+#   4. Inclui cabeçalho: [Endereços inválidos:]
+
+
+def relatorio_txt(tupla_ip):
+    if len(tupla_ip[0]) <= 0 and len(tupla_ip[1]) <= 0:
+        print('não há registros carregados')
+    else:
+        for i, ip in enumerate(tupla_ip):
+            g = False
+            if i == 0 and g is False:
+                grava_txt('src/L07/saida.txt', '[Endereços Válidos]')
+                g = True
+            if i == 1 and g is False:
+                grava_txt('src/L07/saida.txt', '\n[Endereços Inválidos]')
+                g = True
+            for k in ip:
+                grava_txt('src/L07/saida.txt', k)
+    return True
+
+
+# Grava os registros no arquivo SAIDA.txt
+
+def grava_txt(arquivo, registro):
+    with open(arquivo, 'a') as registros:
+        registros.write(f'{registro}\n')
+
+# Função principal
+
+
+def relatorio_ip(arquivo):
+    a = le_txt(arquivo)
+    b = verifica_ip(a)
+    relatorio_txt(b)
+    foot = f'\n\nRelatório gerado em: {datetime.datetime.now()}'
+    grava_txt('src/L07/saida.txt', foot)
+    return True
+
+
+# -----------------------------------
+# PRINCIPAL
+# -----------------------------------
+
+relatorio_ip('src/L07/ip.txt')
+
+
+
+
+
+
+        
+
