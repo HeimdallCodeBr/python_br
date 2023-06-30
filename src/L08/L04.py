@@ -30,6 +30,8 @@ class Pessoa():
 
     def envelhecer(self, ano):
         self.idade += ano
+        for a in range(ano):
+            self.crescer()
         return self.idade
 
     def engordar(self, peso_add):
@@ -40,17 +42,23 @@ class Pessoa():
         self.peso -= peso_sub
         return self.peso
 
-    def crescer(self, idade):
-        pass
+    def crescer(self):
+        if self.idade <= 21:
+            self.altura += 0.5
 
 
-n1 = Pessoa('Jefersom', 47, 160, 1.90)
-print(n1.nome)
-print(n1.peso)
-n1.engordar(3)
-print(n1.peso)
-n1.emagrecer(5)
-print(n1.peso)
-print(n1.idade)
-n1.envelhecer(4)
-print(n1.idade)
+n1 = Pessoa('Jefersom', 16, 160, 190)
+n2 = Pessoa('MJulia', 15, 50, 165)
+
+
+for i in range(10):
+    if n1.idade and n2.idade <= 21:
+        print(i)
+        n1.envelhecer(1)
+        print(n1.nome, n1.idade, n1.altura)
+        n2.envelhecer(1)
+        print(n2.nome, n2.idade, n2.altura)
+        print('--------------------------')
+    else:
+        break
+
