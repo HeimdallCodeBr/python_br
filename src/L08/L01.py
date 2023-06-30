@@ -20,20 +20,22 @@ system('clear')
 class Bola:
 
     def __init__(self, cor, circunferencia, material):
-        pass
-
         self.cor = cor
         self.circunferencia = circunferencia
         self.material = material
 
-    def troca_cor(self, cor_troca):
-        pass
+    def troca_cor(self):
+        cor_troca = input('Informe a nova cor: ')
+        self.cor_anterior = self.cor
+        self.cor = cor_troca.lower()
+        print(f'\nA cor foi alterada de "{self.cor_anterior}" para "{self.cor}"\n')
 
     def mostra_cor(self):
         print(self.cor)
 
 
 b1 = Bola('azul', '50', 'plástico')
-
 b1.mostra_cor()
 
+b1.troca_cor()
+b1.mostra_cor()
