@@ -39,10 +39,7 @@ class TV():
         pass
 
     def faixa_canal(self):
-        if self.canal in range(100, 500):  # Faixa de canal entre 100 e 500
-            print('Ok')
-        else:
-            print('canal fora do range')
+        pass
 
     def faixa_volume(self):
         pass
@@ -50,4 +47,4 @@ class TV():
 
 samsung = TV(8)
 
-print(samsung.faixa_canal(99))
+
