@@ -32378,6 +32378,10 @@ APOCALIPSE
 soma = 0
 soma_v = 0
 soma_c = 0
+soma_d = 0
+soma_s = 0
+soma_j = 0
+soma_f = 0
 
 
 consoantes = []
@@ -32387,15 +32391,26 @@ biblia = biblia.lower()
 
 for i in biblia.split():
     soma += 1
+    if i.lower() == 'senhor':
+        soma_s += 1
+    if i.lower() == 'deus':
+        soma_d += 1
+    if i.lower() == 'jesus':
+        soma_j += 1
+    if i.lower() == 'firmamento':
+        soma_f += 1
 
 
-    # if i in 'aeiou':
-    #     soma_v += 1
-    # else:
-    #     soma_c += 1
-    #     consoantes.append(i)
+    if i in 'aeiou':
+        soma_v += 1
+    else:
+        soma_c += 1
+        consoantes.append(i)
 
-# print (f'Total de consoantes na biblia: {soma_c}')
-# print (f'Total de vogais na biblia....: {soma_v}')
-
-print (soma)
+print (f'Total de consoantes na biblia: {soma_c}')
+print (f'Total de vogais na biblia....: {soma_v}')
+print (f'Palavra [Senhor] aparece.....: {soma_s}')
+print (f'Palavra [Deus] aparece.......: {soma_d}')
+print (f'Palavra [Jesus] aparece......: {soma_j}')
+print (f'Palavra [firmamento] aparece.: {soma_f}')
+print (f'\nTotal palavras...............: {soma}\n')
