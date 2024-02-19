@@ -2,35 +2,36 @@
 
 from os import system
 
+# Resolução Lista 08 Exercicio 01 Python Brasil (J.Siqueira 02/23).
 
-"""Resolução Lista 08 Exercicio 01 Python Brasil (J.Siqueira 02/23)."""
+# 1. Classe Bola:  Crie uma classe que modele uma bola:
 
-"""
-1. Classe Bola:  Crie uma classe que modele uma bola:
+# a. Atributos: Cor,  circunferência, material
 
-a. Atributos: Cor,  circunferência, material
-
-b. Métodos: trocaCor e mostraCor
-
-"""
+# b. Métodos: trocaCor e mostraCor
 
 system('clear')
 
 
 class Bola:
+    "Está classe representa uma bola."
 
     def __init__(self, cor, circunferencia, material):
         self.cor = cor
         self.circunferencia = circunferencia
         self.material = material
+        self.cor_anterior = ''
 
     def troca_cor(self):
+        "Troca a cor."
         cor_troca = input('Informe a nova cor: ')
         self.cor_anterior = self.cor
         self.cor = cor_troca.lower()
-        print(f'\nA cor foi alterada de "{self.cor_anterior}" para "{self.cor}"\n')
+        print(f'\nA cor foi alterada de "{
+              self.cor_anterior}" para "{self.cor}"\n')
 
     def mostra_cor(self):
+        "Mostra a cor."
         print(self.cor)
 
 

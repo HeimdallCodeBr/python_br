@@ -12,7 +12,7 @@ Data de Nascimento: 29/10/1973
 Você nasceu em  29 de Outubro de 1973.
 
 """
-data = input('Informe data no formato dd/mm/aaaa: ')
+data = input ('Informe data no formato dd/mm/aaaa: ')
 
 dia, mes, ano = data.split('/')
 mes_extenso = ''
