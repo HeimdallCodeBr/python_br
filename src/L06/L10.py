@@ -11,9 +11,8 @@ na tela por extenso.
 """
 
 
-def numero_extenso(numero: int):
+def numero_extenso(numero: int) 
     valor = ''
-
     unidade = {
         0: 'zero',
         1: 'um',
