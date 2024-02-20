@@ -1,8 +1,10 @@
+# pylint: disable=C0103
+
+"""Resolução Lista 08 Exercicio 01 Python Brasil (J.Siqueira 02/23)."""
+
 # -*- coding: utf-8 -*-
 
 from os import system
-
-# Resolução Lista 08 Exercicio 01 Python Brasil (J.Siqueira 02/23).
 
 # 1. Classe Bola:  Crie uma classe que modele uma bola:
 
@@ -10,8 +12,7 @@ from os import system
 
 # b. Métodos: trocaCor e mostraCor
 
-system('clear')
-
+system('cls')
 
 class Bola:
     "Está classe representa uma bola."
@@ -27,8 +28,7 @@ class Bola:
         cor_troca = input('Informe a nova cor: ')
         self.cor_anterior = self.cor
         self.cor = cor_troca.lower()
-        print(f'\nA cor foi alterada de "{
-              self.cor_anterior}" para "{self.cor}"\n')
+        return f'\nA cor foi alterada de "{self.cor_anterior}" para "{self.cor}"\n'
 
     def mostra_cor(self):
         "Mostra a cor."
