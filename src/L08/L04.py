@@ -1,27 +1,21 @@
 # -*- coding: utf-8 -*-
-
-import os
+# pylint: disable=C0103
 
 """Resolução Lista 08 Exercicio 04 Python Brasil (J.Siqueira 02/23)."""
 
-"""
-4. Classe Pessoa:  Crie uma classe que modele uma pessoa:
+import os
 
-a. Atributos: nome, idade, peso e altura
+# 4. Classe Pessoa:  Crie uma classe que modele uma pessoa:
+#       a. Atributos: nome, idade, peso e altura
+#       b. Métodos: Envelhercer,  engordar,  emagrecer,  crescer.
 
-b. Métodos: Envelhercer,  engordar,  emagrecer,  crescer.
+# Obs:  Por padrão, a cada ano que nossa pessoa envelhece, sendo a
+#       idade dela menor que 21 anos, ela deve crescer 0,5 cm.
 
-Obs: Por padrão, a cada ano que nossa pessoa envelhece, 
-sendo a idade dela menor que 21 anos, ela deve crescer
-0,5 cm.
-
-"""
-
-os.system('clear')
-
+os.system('cls')
 
 class Pessoa():
-
+    "Modela uma classe Pessoa."
     def __init__(self, nome, idade, peso, altura):
         self.nome = nome
         self.idade = idade
@@ -29,20 +23,24 @@ class Pessoa():
         self.altura = altura
 
     def envelhecer(self, ano):
+        "Método envelhecer."
         self.idade += ano
         for a in range(ano):
             self.crescer()
         return self.idade
 
     def engordar(self, peso_add):
+        "Método engordar."
         self.peso += peso_add
         return self.peso
 
     def emagrecer(self, peso_sub):
+        "Método emagrecer."
         self.peso -= peso_sub
         return self.peso
 
     def crescer(self):
+        "Método crescer."
         if self.idade <= 21:
             self.altura += 0.5
 

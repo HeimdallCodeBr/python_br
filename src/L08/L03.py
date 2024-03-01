@@ -1,44 +1,44 @@
 # -*- coding: utf-8 -*-
-
-from os import system
+# pylint: disable=C0103
 
 """Resolução Lista 08 Exercicio 03 Python Brasil (J.Siqueira 02/23)."""
 
-"""
-3. Classe Retangulo:  Crie uma classe que modele um retangulo:
+from os import system
 
-a. Atributos: LadoA, LadoB (ou Comprimento e Largura, ou Base e Altura, a
-escolher);
+# 3. Classe Retangulo:  Crie uma classe que modele um retangulo:
+#       a. Atributos: LadoA, LadoB (ou Comprimento e Largura, ou Base
+#          e Altura, a escolher);
+#       b. Métodos: Mudar valor dos lados, Retornar valor dos lados,
+#          calcular Área e calcular Perímetro;
+#       c. Crie um programa que utilize esta classe. Ele deve pedir
+#          ao usuário que informe as medidades de um local.
+#          Depois, deve criar um objeto com as medidas e calcular a
+#          quantidade de pisos e de rodapés necessárias para o local.
 
-b. Métodos: Mudar valor dos lados, Retornar valor dos lados, calcular Área
-e calcular Perímetro;
-
-c. Crie um programa que utilize esta classe. Ele deve pedir ao usuário que
-informe as medidades de um local. Depois, deve criar um objeto com as medidas
-e calcular a quantidade de pisos e de rodapés necessárias para o local.
-
-"""
-
-system('clear')
+system('cls')
 
 
 class Retangulo():
-
+    "Modela uma classe Retangulo."
     def __init__(self, lado_a, lado_b):
         self.lado_a = lado_a
         self.lado_b = lado_b
 
     def mudar_valor(self, lado_a_modificado, lado_b_modificado):
+        "Altera o valor das areas do retangulo."
         self.lado_a = lado_a_modificado
         self.lado_b = lado_b_modificado
 
     def retornar_valor(self):
+        "Retorna o valor dos lados do retangulo."
         return self.lado_a, self.lado_b
 
     def calcular_area(self):
+        "Retorna a areada do retangulo."
         return self.lado_a * self.lado_b
 
     def calcular_perimetro(self):
+        "Retorna o perimetro do retangulo."
         return 2 * (self.lado_a + self.lado_b)
 
 

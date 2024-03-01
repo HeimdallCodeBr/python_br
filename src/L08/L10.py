@@ -1,36 +1,69 @@
 # -*- coding: utf-8 -*-
+# pylint: disable=C0103
 
 """Resolução Lista 08 Exercicio 10 Python Brasil (J.Siqueira 02/23)."""
 
-"""
-10. Classe Bomba de Combustível:
 
-Faça um programa completo utilizando classes e métodos que:
+# 10. Classe Bomba de Combustível:
+# Faça um programa completo utilizando classes e métodos que:
 
-a. Possua uma classe chamada bombaCombustível, com no mínimo esses atributos:
+#   a. Possua uma classe chamada bombaCombustível, com no mínimo esses atributos:
 
-i. tipoCombustivel.
+#       i. tipoCombustivel.
 
-ii. valorLitro
+#       ii. valorLitro
 
-iii. quantidadeCombustivel
+#       iii. quantidadeCombustivel
 
-b. Possua no mínimo esses métodos:
 
-i. abastecerPorV alor( ) – método onde é informad o o valor a ser abastecido
-e mostra a quantidade de litros que foi colocada no veículo
+#   b. Possua no mínimo esses métodos:
 
-ii. abastecerPorLitro( ) – método onde é informado a quantidade em litros de
-combustível e mostra o valor a ser pago pelo cliente.
+#       i. abastecerPorValor( ) – método onde é informado o valor a ser abastecido
+#          e mostra a quantidade de litros que foi colocada no veículo.
 
-iii. alterarV alor( ) – altera o valor do litro do combustível.
+#       ii. abastecerPorLitro( ) – método onde é informado a quantidade em litros de
+#           combustível e mostra o valor a ser pago pelo cliente.
 
-iv. alterarCombustivel( ) – altera o tipo do combustível.
+#       iii. alterarValor( ) – altera o valor do litro do combustível.
 
-v. alterarQuantidadeCombustivel( ) – altera a quantidade de combustível
-restante na bomba.
+#       iv. alterarCombustivel( ) – altera o tipo do combustível.
 
-OBS: Sempr e que acontecer um abastecimento é necessário atualizar a quantidade
-de combustível total na bomba.
+#       v. alterarQuantidadeCombustivel( ) – altera a quantidade de combustível
+#          restante na bomba.
 
-"""
+
+# OBS: Sempre e que acontecer um abastecimento é necessário atualizar a quantidade
+#      de combustível total na bomba.
+
+
+class bombaCombustivel():
+    "Modelagem bomba de combustivel"
+    def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel):
+        self.tipoCombustivel = tipoCombustivel
+        self.valorLitro = valorLitro
+        self.quantidadeCombustivel = quantidadeCombustivel
+
+    def abastecerPorValor(self, valorLitro):
+        "Método abastecer por valor"
+        return valorLitro
+
+    def abastecerPorLitro(self):
+        "Método abastecer por litro"
+
+    def alterarValor(self, valorLitro):
+        "Método alterar valor do combustivél"
+        return valorLitro
+    
+    def alterarCombustivel(self):
+        "Método alterar tipo do combustivel"
+
+    def alterarQuantidadeCombustivel(self):
+        "Método alterar quantidade do combustivel"
+
+# Gasolina Comum: O preço médio é de R$ 5,57 por litro.
+# Etanol Comum: O preço médio é de R$ 3,81 por litro.
+# Diesel S10: O preço médio é de R$ 5,63 por litro.
+
+g1 = bombaCombustivel('Gasolina', 5.57, 30)
+print(g1.tipoCombustivel)
+print(g1.valorLitro)
