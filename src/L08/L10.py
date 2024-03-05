@@ -43,16 +43,18 @@ class bombaCombustivel():
         self.valorLitro = valorLitro
         self.quantidadeCombustivel = quantidadeCombustivel
 
-    def abastecerPorValor(self, valorLitro):
+    def abastecerPorValor(self, quantidadeCombustivelValor):
         "Método abastecer por valor"
-        return valorLitro
+        return quantidadeCombustivelValor/self.valorLitro
 
-    def abastecerPorLitro(self):
+    def abastecerPorLitro(self, quantidadeCombustivelLitro):
         "Método abastecer por litro"
+        return quantidadeCombustivelLitro*self.valorLitro
 
-    def alterarValor(self, valorLitro):
+    def alterarValor(self, novoValorLitro):
         "Método alterar valor do combustivél"
-        return valorLitro
+        self.valorLitro = novoValorLitro
+        
     
     def alterarCombustivel(self):
         "Método alterar tipo do combustivel"
@@ -64,6 +66,72 @@ class bombaCombustivel():
 # Etanol Comum: O preço médio é de R$ 3,81 por litro.
 # Diesel S10: O preço médio é de R$ 5,63 por litro.
 
-g1 = bombaCombustivel('Gasolina', 5.57, 30)
+g1 = bombaCombustivel('Gasolina', 3, 30)
+a = g1.abastecerPorValor(100)
+b = g1.abastecerPorLitro(20)
 print(g1.tipoCombustivel)
 print(g1.valorLitro)
+print(f'Abastecer {a:.1f} R$')
+print(f'Abastecer {b:.1f} Litros')
+
+g1.alterarValor(2)
+a = g1.abastecerPorValor(100)
+b = g1.abastecerPorLitro(20)
+print('--------------------------')
+print(f'Abastecer {a:.2f} R$')
+print(f'Abastecer {b:.2f} Litros')
+print('\n')
+
+
+
+
+
+"""
+class BombaCombustivel:
+    def __init__(self, tipo_combustivel, valor_litro, quantidade_combustivel):
+        self.tipo_combustivel = tipo_combustivel
+        self.valor_litro = valor_litro
+        self.quantidade_combustivel = quantidade_combustivel
+
+    def abastecer_por_valor(self, valor_abastecido):
+        litros_abastecidos = valor_abastecido / self.valor_litro
+        self.quantidade_combustivel -= litros_abastecidos
+        return litros_abastecidos
+
+    def abastecer_por_litro(self, litros_abastecidos):
+        valor_a_pagar = litros_abastecidos * self.valor_litro
+        self.quantidade_combustivel -= litros_abastecidos
+        return valor_a_pagar
+
+    def alterar_valor(self, novo_valor_litro):
+        self.valor_litro = novo_valor_litro
+
+    def alterar_combustivel(self, novo_tipo_combustivel):
+        self.tipo_combustivel = novo_tipo_combustivel
+
+    def alterar_quantidade_combustivel(self, nova_quantidade_combustivel):
+        self.quantidade_combustivel = nova_quantidade_combustivel
+
+
+# Example usage:
+if __name__ == "__main__":
+    bomba = BombaCombustivel(tipo_combustivel="Gasolina", valor_litro=4.5, quantidade_combustivel=1000)
+    print(f"Initial quantity: {bomba.quantidade_combustivel} liters")
+    litros_abastecidos = bomba.abastecer_por_valor(90)
+    print(f"Liters filled: {litros_abastecidos:.2f}")
+    print(f"Remaining quantity: {bomba.quantidade_combustivel:.2f} liters")
+    valor_a_pagar = bomba.abastecer_por_litro(20)
+    print(f"Amount to pay: ${valor_a_pagar:.2f}")
+    bomba.alterar_valor(4.8)
+    print(f"New value per liter: ${bomba.valor_litro:.2f}")
+    bomba.alterar_combustivel("Etanol")
+    print(f"New fuel type: {bomba.tipo_combustivel}")
+    bomba.alterar_quantidade_combustivel(900)
+    print(f"Updated quantity: {bomba.quantidade_combustivel:.2f} liters")
+
+
+
+
+
+
+"""
