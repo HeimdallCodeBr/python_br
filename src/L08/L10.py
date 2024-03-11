@@ -38,14 +38,16 @@
 
 class bombaCombustivel():
     "Modelagem bomba de combustivel"
-    def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel):
+    def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel_naBomba):
         self.tipoCombustivel = tipoCombustivel
         self.valorLitro = valorLitro
-        self.quantidadeCombustivel = quantidadeCombustivel
+        self.quantidadeCombustivel_naBomba = quantidadeCombustivel_naBomba
 
-    def abastecerPorValor(self, quantidadeCombustivelValor):
+    def abastecerPorValor(self, valor_abastecer_real):
         "Método abastecer por valor"
-        return quantidadeCombustivelValor/self.valorLitro
+        total_litros = valor_abastecer_real/self.valorLitro
+        self.quantidadeCombustivel_naBomba -= total_litros
+        return total_litros
 
     def abastecerPorLitro(self, quantidadeCombustivelLitro):
         "Método abastecer por litro"
@@ -66,21 +68,29 @@ class bombaCombustivel():
 # Etanol Comum: O preço médio é de R$ 3,81 por litro.
 # Diesel S10: O preço médio é de R$ 5,63 por litro.
 
-g1 = bombaCombustivel('Gasolina', 3, 30)
-a = g1.abastecerPorValor(100)
-b = g1.abastecerPorLitro(20)
-print(g1.tipoCombustivel)
-print(g1.valorLitro)
-print(f'Abastecer {a:.1f} R$')
-print(f'Abastecer {b:.1f} Litros')
+b1 = bombaCombustivel('Gasolina', 5.57, 1200)
+b2 = bombaCombustivel('Etanol', 3.81, 1500 )
+b3 = bombaCombustivel('Disel', 5.63, 2500)
 
-g1.alterarValor(2)
-a = g1.abastecerPorValor(100)
-b = g1.abastecerPorLitro(20)
-print('--------------------------')
-print(f'Abastecer {a:.2f} R$')
-print(f'Abastecer {b:.2f} Litros')
-print('\n')
+
+
+print(f'{b1.tipoCombustivel}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
