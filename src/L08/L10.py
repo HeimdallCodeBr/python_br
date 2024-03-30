@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0103
-import os 
+import os
 
-"""Resolução Lista 08 Exercicio 10 Python Brasil (J.Siqueira 02/23)."""
+# Resolução Lista 08 Exercicio 10 Python Brasil (J.Siqueira 02/23).
 
 
 # 10. Classe Bomba de Combustível:
