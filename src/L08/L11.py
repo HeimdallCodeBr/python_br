@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0103, C0114
-import os
+import os, platform
 
 # Resolução Lista 08 Exercicio 11 Python Brasil (J.Siqueira 02/23).
 
@@ -29,3 +29,6 @@ import os
 
 os.system('cls')
 
+print(os.name)
+print(platform.system())
+print(platform.release())
