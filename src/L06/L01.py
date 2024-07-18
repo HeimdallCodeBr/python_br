@@ -27,7 +27,7 @@ os.system('clear')
 
 
 s1 = 'Brasil Hexa 2006?'
-s2 = 'Brasil Hexa 2006!'
+s2 = 'Brasil Hexa 2006?'
 
 
 print(f'Tamanho de "{s1}": {len(s1)} caracteres')
