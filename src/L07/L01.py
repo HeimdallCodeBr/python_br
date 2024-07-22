@@ -93,13 +93,13 @@ def relatorio_txt(tupla_ip):
         for i, ip in enumerate(tupla_ip):
             g = False
             if i == 0 and g is False:
-                grava_txt('src/L07/saida.txt', '[Endereços Válidos]')
+                grava_txt('saida.txt', '[Endereços Válidos]')
                 g = True
             if i == 1 and g is False:
-                grava_txt('src/L07/saida.txt', '\n[Endereços Inválidos]')
+                grava_txt('saida.txt', '\n[Endereços Inválidos]')
                 g = True
             for k in ip:
-                grava_txt('src/L07/saida.txt', k)
+                grava_txt('saida.txt', k)
     return True
 
 
@@ -117,7 +117,7 @@ def relatorio_ip(arquivo):
     b = verifica_ip(a)
     relatorio_txt(b)
     foot = f'\n\nRelatório gerado em: {datetime.datetime.now()}'
-    grava_txt('src/L07/saida.txt', foot)
+    grava_txt('saida.txt', foot)
     return True
 
 
@@ -125,7 +125,7 @@ def relatorio_ip(arquivo):
 # PRINCIPAL
 # -----------------------------------
 
-relatorio_ip('src/L07/ip.txt')
+relatorio_ip('ip.txt')
 
 
 

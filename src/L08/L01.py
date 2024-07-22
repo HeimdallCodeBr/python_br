@@ -38,5 +38,5 @@ class Bola:
 b1 = Bola('azul', '50', 'plástico')
 b1.mostra_cor()
 
-b1.troca_cor()
+b1.troca_cor()''
 b1.mostra_cor()
