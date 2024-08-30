@@ -33,3 +33,4 @@ print(f'Idade com vetor inverso..: {idade[::-1]}')
 print('-'*c)
 print(f'Altura com vetor original: {altura}')
 print(f'Altura com vetor inverso.: {altura[::-1]}')
+
