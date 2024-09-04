@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from os import system
+
 """Resolução Lista 09 Exercicio 01 Python Brasil (J.Siqueira 02/23)."""
 
 """
@@ -16,7 +18,7 @@ alexandre       456123789
 anderson        1245698456
 antonio         123456456
 carlos          91257581
-cesar           987458  
+cesar           987458
 rosemary        789456125
 
 Neste arquivo, o primeiro campo corresponde ao login do usuário e o
@@ -58,3 +60,8 @@ Gerar a saída numa página html;
 Criar o programa que lê as pastas e gera o arquivo inicial;
 
 """
+
+system("ls -lha")
+
+
+

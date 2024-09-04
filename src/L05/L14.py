@@ -2,7 +2,7 @@
 from os import system
 from random import randint
 
-system('clear')
+# system('clear')
 
 """Resolução Lista 05 Exercicio 14 Python Brasil (J.Siqueira 02/23)."""
 
@@ -77,19 +77,9 @@ def gera_matriz(tamanho: int) -> list:
 # ==================
 
 
-mk = [
-    [8, 3, 9],
-    [1, 4, 9],
-    [6, 7, 4]
-]
+mk = [[8, 3, 9], [1, 4, 9], [6, 7, 4]]
 
-mj = [
-    [4, 7, 7, 1, 5],
-    [9, 3, 5, 8, 6],
-    [4, 6, 5, 2, 8],
-    [4, 2, 5, 1, 3],
-    [2, 9, 5, 8, 1]
-]
+mj = [[4, 7, 7, 1, 5], [9, 3, 5, 8, 6], [4, 6, 5, 2, 8], [4, 2, 5, 1, 3], [2, 9, 5, 8, 1]]
 
 
 m = [
@@ -101,17 +91,17 @@ m = [
 
 k = 0
 while True:
-    system('clear')
+    #    system("clear")
     r = randint(3, 3)
     g = m  # gera_matriz(r)
     v = quadrado_magico(g)
     resultado, coluna, linha = v
-    print('\n----------------------------')
-    print(f'Matriz: {resultado} => {g}')
-    print(f'Numero de interações {k} ')
-    print(f'Coluna: {coluna}')
-    print(f'Linha:  {linha}')
-    print('----------------------------\n')
+    print("\n----------------------------")
+    print(f"Matriz: {resultado} => {g}")
+    print(f"Numero de interações {k} ")
+    print(f"Coluna: {coluna}")
+    print(f"Linha:  {linha}")
+    print("----------------------------\n")
     if resultado:
         break
     else:

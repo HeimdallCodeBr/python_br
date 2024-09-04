@@ -15,9 +15,9 @@ Dica: lembre-se que ao informar o nome o usuário pode
 digitar letras maiúsculas ou minúsculas.
 
 """
-system('clear')
+# system('clear')
 
-nome = input('Digite um nome: ')
+nome = input("Digite um nome: ")
 
 nome = nome.upper()
 
