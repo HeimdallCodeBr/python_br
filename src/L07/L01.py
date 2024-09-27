@@ -1,3 +1,6 @@
+# pylint: disable=W0105, C0103, C0116
+
+
 # -*- coding: utf-8 -*-
 
 """Resolução Lista 07 Exercicio 01 Python Brasil (J.Siqueira 06/23)."""

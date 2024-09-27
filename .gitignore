@@ -4,6 +4,7 @@
 
 # Environments
 venv
+.venv
 venvs
 .gitignore~
 .gitignore.un~

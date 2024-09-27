@@ -1,7 +1,9 @@
+# pylint: disable=W0105, W1514, C0114, C0103
+
 # -*- coding: utf-8 -*-
 
 from os import system
-
+import random
 """Resolução Lista 06 Exercicio 11 Python Brasil (J.Siqueira 02/23)."""
 
 """
@@ -21,15 +23,22 @@ A palavra é: _ _ _ _ O
 Digite uma letra: E
 A palavra é: _ E _ _ O
 Digite uma letra: S
--> Você errou pela 2ª vez. Tente de novo!
+-> Você errou pela 2ª vez. Tente de novo """
 
-"""
+system("cls")
 
-system("clear")
+caminho = r'C:\Projetos\python_br\src\L06\palavras.txt'
+with open(fr'{caminho}', 'r') as arquivo:
+    banco = arquivo.read()
+    palavras = banco.split('\n')
+    palavra_sorteada = random.choice(palavras)
+    palavras.remove(palavra_sorteada)
+    palavra_oculta = '- '*len(palavra_sorteada)
 
-palavra = "laranja"
-palavra_secreta = ""
-letra = "a"
+print(palavra_oculta)
 
-for i, j in enumerate(palavra):
-    print(i, j)
+while len(palavras) > 0:
+    palavra_sorteada = random.choice(palavras)
+    palavras.remove(palavra_sorteada)
+    letra = input('digite uma letra: ')
+    
