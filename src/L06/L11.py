@@ -4,6 +4,7 @@
 
 from os import system
 import random
+
 """Resolução Lista 06 Exercicio 11 Python Brasil (J.Siqueira 02/23)."""
 
 """
@@ -27,18 +28,31 @@ Digite uma letra: S
 
 system("cls")
 
-caminho = r'C:\Projetos\python_br\src\L06\palavras.txt'
-with open(fr'{caminho}', 'r') as arquivo:
+caminho = r"C:\Projetos\python_br\src\L06\palavras.txt"
+with open(rf"{caminho}", "r") as arquivo:
     banco = arquivo.read()
-    palavras = banco.split('\n')
+    palavras = banco.split("\n")
     palavra_sorteada = random.choice(palavras)
     palavras.remove(palavra_sorteada)
-    palavra_oculta = '- '*len(palavra_sorteada)
+    palavra_oculta = ""
 
-print(palavra_oculta)
+# tentativas = 6
+# print(palavra_sorteada)
+# while tentativas >= 0:
+#     letra = input("digite uma letra: ")
+#     for i in palavra_sorteada:
+#         if letra == i:
+#             palavra_oculta += i
+#         else:
+#             palavra_oculta += "_"
+#     print(palavra_oculta)
 
-while len(palavras) > 0:
-    palavra_sorteada = random.choice(palavras)
-    palavras.remove(palavra_sorteada)
-    letra = input('digite uma letra: ')
-    
+
+palavra_sorteada = "pipoca"
+palavra_oculta = "_" * len(palavra_sorteada)
+
+
+letra = "p"
+
+p = 0
+print(palavra_sorteada[:-1])
