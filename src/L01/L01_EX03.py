@@ -7,4 +7,3 @@ n2 = int(input('Digite segundo número.: '))
 
 print(f'\nA soma de {n1} + {n2} é {n1+n2}')
 
-print('teste')
