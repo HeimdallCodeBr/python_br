@@ -3,7 +3,7 @@
 
 # -*- coding: utf-8 -*-
 
-"""Resolução Lista 07 Exercicio 01 Python Brasil (J.Siqueira 06/23)."""
+"""Resolução Lista 07 Exercicio 01 Python Brasil (J.Siqueira 06/23)..."""
 
 import os
 import datetime
