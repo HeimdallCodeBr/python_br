@@ -12,6 +12,7 @@ Exercicios........: https://wiki.python.org.br/EstruturaSequencial
 
 """
 
+# Utilizando código ANSI
 
 print("\033[1;30mGray like Ghost\033[1;m\n")
 print("\033[1;31mRed like Radish\033[1;m\n")
