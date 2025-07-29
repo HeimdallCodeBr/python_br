@@ -16,7 +16,7 @@ media = []
 k = 0
 c = 40
 
-while k < 10:
+while k < 3:
 
     system('clear')
     print('='*c)

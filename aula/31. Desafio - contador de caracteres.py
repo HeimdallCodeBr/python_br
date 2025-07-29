@@ -1,3 +1,6 @@
+import os
+os.system('clear')
+
 # Crie um código que conta o número de vogais de um bloco de texto qualquer.
 # O código deve desconsiderar letras maiúsculas/minúsculas, isto é, "a" e "A" contam da mesma forma.
 # O texto pode ser colado diretamente como um string no código.
@@ -29,13 +32,30 @@ com o réptil do mesmo nome (em português, píton ou pitão).
 texto = texto.replace(' ','')
 texto = texto.lower()
 
-#criterio = 'aeiouáéíóúâêîôû'
-criterio = 'aeiou'
+# criterio = {
+#     'a'   : 'aáâàä',
+#     'e'   : 'eéêèë',
+#     'i'   : 'iíîìï',
+#     'o'   : 'oóôòö',
+#     'u'   : 'uúûùü',
+# }
 
-n = 0
-for letra in texto:
-    if letra in criterio:
-        n += 1
+# for chave, valor in criterio.items():
+#     for letra_acento in valor:
+#         for letra in texto:
+#             if letra == letra_acento:
+#                 texto = texto.replace(letra, chave)
 
-print(f"O texto tem um total de \033[1;31m{n}\033[1;m consoantes, foi considerado maiuscula, minuscula e letras com acento")
-    
+print (f'A - {texto.count('a')}')
+print (f'E - {texto.count('e')}')
+print (f'I - {texto.count('i')}')
+print (f'O - {texto.count('o')}')
+print (f'U - {texto.count('u')}')
+
+
+
+
+
+
+
+
